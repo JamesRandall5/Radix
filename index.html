@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radix Test</title>
+    <link rel="icon" type="image/png" href="images/icons/tabIcon.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Created by James Randall for Airwave Europe Ltd. -->
+</head>
+<body>
+    <div class="header">
+        <div class="logos">
+            <a href="https://www.nhs.uk/" target="_blank">
+                <img src="images/logos/left-logo.png" alt="Left Logo" class="logo-left">
+            </a>
+            <a href="https://www.hospitaltv.co.uk/products/mycare-tv/" target="_blank">
+                <img src="images/logos/right-logo.png" alt="Right Logo" class="logo-right">
+            </a>     
+        </div>
+    </div>
+
+    <div class="container" id="button-container">
+        <!-- Button 1 -->
+        <a class="button" onclick='radix.doCommand(JSON.stringify( { "command":  {"@class" : "com.viso.entities.commands.CommandRemoteExec", "remoteExecItem" : { "@class" : "com.viso.entities.RemoteExecItem", "repositoryItemId" : "670639868b15015f82e2c958", "repositoryItemName" : "keyevent for Knox", "domain" : "qa", "owner" : "admin@qa", "creationDate" : 1728461190065, "isReadOnly" : false, "privateRepoItem" : false, "command" : "!internal", "args" : [ "input_keyevent", "10", "0", "24" ], "authority" : "AUTHORITY_SYSTEM", "waitForExit" : true, "collectOutput" : true, "isScript" : false, "props" : { "args" : "input_keyevent 10 0 24" } }}}  ))'>
+            <div class="button-content">
+                <div class="button-text">
+                    <span class="description"></span>
+                    <span class="title">Volume Up</span>
+                </div>
+                <div class="button-icon">
+                    <img src="images/icons/tv.png" alt="Icon">
+                </div>
+            </div>
+        </a>
+        <!-- Button 2 -->
+        <a class="button" onclick='radix.doCommand(JSON.stringify( { "command":  {"@class" : "com.viso.entities.commands.CommandRemoteExec", "remoteExecItem" : { "@class" : "com.viso.entities.RemoteExecItem", "repositoryItemId" : "670639868b15015f82e2c958", "repositoryItemName" : "keyevent for Knox", "domain" : "qa", "owner" : "admin@qa", "creationDate" : 1728461190065, "isReadOnly" : false, "privateRepoItem" : false, "command" : "!internal", "args" : [ "input_keyevent", "10", "0", "25" ], "authority" : "AUTHORITY_SYSTEM", "waitForExit" : true, "collectOutput" : true, "isScript" : false, "props" : { "args" : "input_keyevent 10 0 25" } }}}  ))'>
+            <div class="button-content">
+                <div class="button-text">
+                    <span class="description"></span>
+                    <span class="title">Volume Down</span>
+                </div>
+                <div class="button-icon">
+                    <img src="images/icons/subs.png" alt="Icon">
+                </div>
+            </div>
+        </a>
+        <!-- End of buttons -->
+    </div>
+
+    <div class="footer">
+        <a href="https://www.hospitaltv.co.uk/" target="_blank">
+        <img class="footer-image1" src="images/logos/footer-image.png" alt="Footer Image">
+    </div>
+
+</body>
+</html>
