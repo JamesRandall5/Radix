@@ -33,13 +33,13 @@ footer {
     font-size: 1em;
 }
 
-/* Main content area between header and footer */
+/* Main content between header and footer */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 160px); /* Account for header and footer height (80px each) */
-    padding: 0 20px; /* Side padding */
+    height: calc(100% - 160px); /* Account for header (80px) and footer (80px) */
+    padding: 0 20px; /* Add some side padding */
     box-sizing: border-box;
 }
 
@@ -48,9 +48,11 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     grid-gap: 20px; /* Spacing between buttons */
-    width: 100%; /* Take full available width */
-    max-width: 1200px; /* Constrain max grid width */
-    height: 100%; /* Fill the remaining height */
+    width: 100%; /* Use full width of the container */
+    max-width: 1400px; /* Limit maximum grid width for better balance */
+    height: 100%; /* Fill the available height */
+    padding: 20px 0; /* Add padding at the top and bottom of the grid */
+    box-sizing: border-box;
 }
 
 /* Individual button styling */
@@ -64,18 +66,13 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%; /* Fill grid cell width */
-    aspect-ratio: 1; /* Ensure buttons are square */
-}
-
-.button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Take full width of grid cell */
+    height: 100%; /* Adjust height dynamically */
 }
 
 .button img {
-    width: 50%; /* Scale icon relative to button size */
-    height: auto; /* Maintain aspect ratio */
+    width: 60px; /* Fixed icon size for consistency */
+    height: 60px;
     margin-bottom: 10px;
 }
 
