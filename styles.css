@@ -53,8 +53,8 @@ main {
     height: calc(100% - 40px); /* Full height minus padding */
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 350px;
-    margi-bottom: 150px
+    margin-top: 175px;
+    margi-bottom: 100px
 }
 
 /* Individual button styling */
