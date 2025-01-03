@@ -7,6 +7,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     background-color: #f9f9f9;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Fixed header and footer */
@@ -17,7 +18,7 @@ header, footer {
     background: linear-gradient(90deg, #0078d4, #005bb5);
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -29,7 +30,7 @@ header {
 
 footer {
     bottom: 0;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /* Main content between header and footer */
@@ -37,39 +38,43 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 140px); /* Adjust for header/footer height */
+    height: calc(100% - 160px); /* Adjust for header/footer (80px each) */
     padding: 20px;
 }
 
 /* Button grid layout */
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    max-width: 600px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 40px; /* Spacing between buttons */
+    width: 90%; /* Allow some padding on the sides */
+    height: 100%; /* Utilize full height between header and footer */
+    max-width: 1200px; /* Constrain max grid width */
 }
 
+/* Individual button styling */
 .button {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    aspect-ratio: 1; /* Ensure buttons are square */
 }
 
 .button:active {
-    transform: scale(0.95); /* Shrink slightly when tapped */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow reduction */
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button img {
-    width: 60px;
-    height: 60px;
+    width: 60%; /* Scale icon relative to button size */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 15px;
 }
 
@@ -80,30 +85,23 @@ main {
 }
 
 .button p {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #666;
     margin: 0;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for smaller resolutions */
 @media (max-width: 600px) {
     .button-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px;
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+        grid-gap: 20px;
     }
 
-    .button {
-        padding: 15px;
+    .button h2 {
+        font-size: 1em;
     }
 
-    .button img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-@media (max-width: 400px) {
-    .button-grid {
-        grid-template-columns: 1fr;
+    .button p {
+        font-size: 0.9em;
     }
 }
