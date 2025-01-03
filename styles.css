@@ -33,25 +33,24 @@ footer {
     font-size: 1em;
 }
 
-/* Main content between header and footer */
+/* Main content area between header and footer */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Full height */
-    padding: 100px 20px; /* Add padding to clear header (top) and footer (bottom) */
-    box-sizing: border-box; /* Ensure padding is included in dimensions */
+    height: calc(100% - 160px); /* Account for header and footer height (80px each) */
+    padding: 0 20px; /* Side padding */
+    box-sizing: border-box;
 }
 
 /* Button grid layout */
 .button-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-gap: 40px; /* Spacing between buttons */
-    width: 90%; /* Add padding on the sides */
-    max-width: 1500px; /* Ensure grid doesn't become too wide */
-    height: calc(100% - 200px); /* Subtract header and footer height (100px + 100px) */
-    box-sizing: border-box; /* Include padding in sizing */
+    grid-gap: 20px; /* Spacing between buttons */
+    width: 100%; /* Take full available width */
+    max-width: 1200px; /* Constrain max grid width */
+    height: 100%; /* Fill the remaining height */
 }
 
 /* Individual button styling */
@@ -60,14 +59,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
     background: white;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    aspect-ratio: 1; /* Keep buttons square */
-    width: 100%; /* Button width adjusts to available space */
+    width: 100%; /* Fill grid cell width */
+    aspect-ratio: 1; /* Ensure buttons are square */
 }
 
 .button:active {
@@ -76,9 +74,9 @@ main {
 }
 
 .button img {
-    width: 60%; /* Scale icon relative to button size */
+    width: 50%; /* Scale icon relative to button size */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .button h2 {
@@ -97,7 +95,7 @@ main {
 @media (max-width: 600px) {
     .button-grid {
         grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-        grid-gap: 20px;
+        grid-gap: 15px;
     }
 
     .button h2 {
