@@ -38,18 +38,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 160px); /* Adjust for header/footer (80px each) */
-    padding: 20px;
+    height: 100%; /* Full height */
+    padding: 100px 20px; /* Add padding to clear header (top) and footer (bottom) */
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
 }
 
 /* Button grid layout */
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     grid-gap: 40px; /* Spacing between buttons */
-    width: 90%; /* Allow some padding on the sides */
-    height: 100%; /* Utilize full height between header and footer */
-    max-width: 1200px; /* Constrain max grid width */
+    width: 90%; /* Add padding on the sides */
+    max-width: 1500px; /* Ensure grid doesn't become too wide */
+    height: calc(100% - 200px); /* Subtract header and footer height (100px + 100px) */
+    box-sizing: border-box; /* Include padding in sizing */
 }
 
 /* Individual button styling */
@@ -58,13 +60,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     background: white;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    aspect-ratio: 1; /* Ensure buttons are square */
+    aspect-ratio: 1; /* Keep buttons square */
+    width: 100%; /* Button width adjusts to available space */
 }
 
 .button:active {
