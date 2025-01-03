@@ -1,185 +1,109 @@
-/* CSS Reset */
-* {
+/* Set the viewport size and remove default margin/padding */
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
-/* Actual Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #BCE0FD; /* Light blue background */
-    margin: 0; /* Remove default body margin */
-}
-
-.header {
-    background-color: white; /* White header */
-    padding: 10px; /* Add padding to the header */
+/* Fixed header and footer */
+header, footer {
     position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
-    z-index: 2; /* Ensure the header is above other content */
+    background: linear-gradient(90deg, #0078d4, #005bb5);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logos {
+header {
+    top: 0;
+    font-size: 1.5em;
+}
+
+footer {
+    bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Main content between header and footer */
+main {
     display: flex;
-    justify-content: space-between;
-}
-
-.logo-left,
-.logo-right {
-    max-width: 100px;
-    height: auto;
-}
-
-.container {
-    margin-top: 58px; /* Adjust this value to change the gap between header and buttons */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 140px); /* Adjust for header/footer height */
     padding: 20px;
 }
 
-.home-button {
-    display: inline-flex; /* Use inline-flex for better alignment */
-    align-items: center;
-    justify-content: flex-start; /* Align content to the left */
-    margin-top: 20px;
-    background-color: #004E98; /* Dark blue button */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    width: 125px; /* Custom width */
-    height: 50px; /* Custom height */
-}
-
-.home-button-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Button grid layout */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     width: 100%;
-}
-
-.home-button-icon {
-    max-height: 100%; /* Ensure the icon fits within the button */
-    margin-right: 5px; /* Space between icon and text */
-    margin-bottom: 2px;
-}
-
-.ch-button {
-    display: inline-flex; /* Use inline-flex for better alignment */
-    align-items: center;
-    justify-content: flex-start; /* Align content to the left */
-    margin-top: 20px;
-    background-color: #004E98; /* Dark blue button */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    width: 150px; /* Custom width */
-    height: 50px; /* Custom height */
-    margin-left: 20px;
-}
-
-.ch-button-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.ch-button-icon {
-    max-height: 100%; /* Ensure the icon fits within the button */
-    margin-right: 5px; /* Space between icon and text */
-    margin-bottom: 2px;
+    max-width: 600px;
 }
 
 .button {
-    display: block;
-    margin: 20px auto;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #004E98;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    max-width: 3000px; /* Adjusted max-width for the buttons */
-    height: 100px;
-    position: relative;
-    overflow: hidden; /* Ensure the icon doesn't overflow */
-}
-
-.button-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-}
-
-.button-text {
-    text-align: left;
-}
-
-.title {
-    font-weight: bold;
-    display: block;
-}
-
-.description {
-    display: block;
-}
-
-.button-icon {
-    margin-left: 10px;
-}
-
-.button-icon img {
-    max-height: 100%; /* Ensure the icon fits within the button */
-}
-
-.video-container {
-    position: relative;
-    width: calc(100% - 20px);
-    max-width: 1920px;
-    margin: 0 auto; /* Center the container horizontally */
-    display: flex; /* Add flexbox for centering the content */
-    align-items: center; /* Center items vertically if necessary */
-    justify-content: center; /* Center items horizontally */
-}
-
-.video-container video {
-    width: 100%;
-    height: auto;
-}
-
-.video-container-chapel {
-    position: relative;
-    width: calc(100% - 20px); /* 100% width minus 10px on each side */
-    max-width: 1920px; /* Max width for large screens */
-    margin: 0 auto; /* Center the container horizontally */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center items vertically if necessary */
-    justify-content: center; /* Center items horizontally */
-    padding: 0 10px; /* Add 10px padding on the left and right */
-}
-
-.video-container-chapel video {
-    width: 100%; /* Ensure the video takes up the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.footer {
-    display: block; /* Display the footer */
-    background-color: white; /* White background color for the footer */
-    padding: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Ensure the footer spans the entire width */
-    z-index: 3; /* Ensure footer appears above other content */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.footer-image1 {
-    max-width: 100%; /* Fit the width within the screen */
-    height: auto; /* Maintain aspect ratio */
-    box-sizing: border-box; /* Include padding in the width calculation */
+.button:active {
+    transform: scale(0.95); /* Shrink slightly when tapped */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow reduction */
+}
+
+.button img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.button h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.button p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+
+    .button {
+        padding: 15px;
+    }
+
+    .button img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
 }
