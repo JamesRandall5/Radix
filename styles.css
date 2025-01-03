@@ -39,7 +39,7 @@ main {
     justify-content: center;
     align-items: center;
     height: calc(100% - 160px); /* Account for header (80px) and footer (80px) */
-    padding: 0 20px; /* Add some side padding */
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -49,11 +49,11 @@ main {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     grid-template-rows: repeat(3, 1fr); /* 3 rows */
     grid-gap: 20px; /* Spacing between buttons */
-    width: 100%; /* Use full width of the container */
-    max-width: 1200px; /* Limit maximum grid width for better balance */
-    height: 100%; /* Fill the available height */
-    margin-top: 100px; /* Ensure the grid clears the header */
+    width: calc(100% - 40px); /* Full width minus padding */
+    height: calc(100% - 40px); /* Full height minus padding */
+    padding: 20px;
     box-sizing: border-box;
+    margin-top: 200px;
 }
 
 /* Individual button styling */
