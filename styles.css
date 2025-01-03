@@ -1,3 +1,8 @@
+/* Root variables for configurable button size */
+:root {
+    --button-size: auto; /* Automatically calculate button size */
+}
+
 /* Set the viewport size and remove default margin/padding */
 html, body {
     margin: 0;
@@ -39,10 +44,7 @@ main {
     justify-content: center;
     align-items: center;
     height: calc(100% - 160px); /* Account for header (80px) and footer (80px) */
-    padding-top: 100px; /* Ensure grid starts below the header */
-    padding-bottom: 80px; /* Ensure grid ends above the footer */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px; /* Add some side padding */
     box-sizing: border-box;
 }
 
@@ -50,26 +52,26 @@ main {
 .button-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-gap: 30px; /* Spacing between buttons */
-    width: 100%; /* Take full available width */
-    max-width: 1400px; /* Limit maximum grid width for better balance */
-    height: calc(100% - 180px); /* Subtract padding from header/footer */
+    grid-gap: 20px; /* Spacing between buttons */
+    width: 100%; /* Use full width of the container */
+    max-width: 1200px; /* Limit maximum grid width for better balance */
+    height: 100%; /* Fill the available height */
     box-sizing: border-box;
 }
 
 /* Individual button styling */
 .button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: var(--button-size); /* Configurable button size */
+    height: var(--button-size); /* Configurable button size */
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%; /* Take full width of grid cell */
-    aspect-ratio: 1; /* Keep buttons square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:active {
@@ -78,13 +80,13 @@ main {
 }
 
 .button img {
-    width: 70px; /* Fixed icon size for consistency */
-    height: 70px;
+    width: 50%; /* Scale icon relative to button size */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px;
 }
 
 .button h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 10px 0;
     color: #333;
 }
@@ -95,11 +97,22 @@ main {
     margin: 0;
 }
 
+/* Automatically calculate button size for 3x3 layout */
+@media (min-width: 1024px) {
+    :root {
+        --button-size: calc((100% - 80px) / 3); /* Calculate based on grid layout */
+    }
+}
+
 /* Responsive design for smaller resolutions */
 @media (max-width: 600px) {
     .button-grid {
         grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
         grid-gap: 15px;
+    }
+
+    :root {
+        --button-size: calc((100% - 60px) / 2); /* Adjust size for 2x layout */
     }
 
     .button h2 {
