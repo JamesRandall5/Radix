@@ -33,13 +33,16 @@ footer {
     font-size: 1em;
 }
 
-/* Main content between header and footer */
+/* Main content area between header and footer */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100% - 160px); /* Account for header (80px) and footer (80px) */
-    padding: 0 20px; /* Add some side padding */
+    padding-top: 100px; /* Ensure grid starts below the header */
+    padding-bottom: 80px; /* Ensure grid ends above the footer */
+    padding-left: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
 }
 
@@ -47,11 +50,10 @@ main {
 .button-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-gap: 20px; /* Spacing between buttons */
-    width: 100%; /* Use full width of the container */
+    grid-gap: 30px; /* Spacing between buttons */
+    width: 100%; /* Take full available width */
     max-width: 1400px; /* Limit maximum grid width for better balance */
-    height: 100%; /* Fill the available height */
-    padding: 20px 0; /* Add padding at the top and bottom of the grid */
+    height: calc(100% - 180px); /* Subtract padding from header/footer */
     box-sizing: border-box;
 }
 
@@ -67,17 +69,22 @@ main {
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%; /* Take full width of grid cell */
-    height: 100%; /* Adjust height dynamically */
+    aspect-ratio: 1; /* Keep buttons square */
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button img {
-    width: 60px; /* Fixed icon size for consistency */
-    height: 60px;
+    width: 70px; /* Fixed icon size for consistency */
+    height: 70px;
     margin-bottom: 10px;
 }
 
 .button h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 10px 0;
     color: #333;
 }
