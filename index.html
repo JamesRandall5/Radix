@@ -3,55 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radix Test</title>
-    <link rel="icon" type="image/png" href="images/icons/tabIcon.png">
+    <title>Healthcare Tablet CMS</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Created by James Randall for Airwave Europe Ltd. -->
 </head>
 <body>
-    <div class="header">
-        <div class="logos">
-            <a href="https://www.nhs.uk/" target="_blank">
-                <img src="images/logos/left-logo.png" alt="Left Logo" class="logo-left">
-            </a>
-            <a href="https://www.hospitaltv.co.uk/products/mycare-tv/" target="_blank">
-                <img src="images/logos/right-logo.png" alt="Right Logo" class="logo-right">
-            </a>     
+    <header>
+        <h1>Healthcare Tablet CMS</h1>
+    </header>
+    <main>
+        <div class="button-grid">
+            <div class="button">
+                <img src="icon1.png" alt="Icon 1">
+                <h2>Title 1</h2>
+                <p>Description 1</p>
+            </div>
+            <div class="button">
+                <img src="icon2.png" alt="Icon 2">
+                <h2>Title 2</h2>
+                <p>Description 2</p>
+            </div>
+            <div class="button">
+                <img src="icon3.png" alt="Icon 3">
+                <h2>Title 3</h2>
+                <p>Description 3</p>
+            </div>
+            <div class="button">
+                <img src="icon4.png" alt="Icon 4">
+                <h2>Title 4</h2>
+                <p>Description 4</p>
+            </div>
+            <div class="button">
+                <img src="icon5.png" alt="Icon 5">
+                <h2>Title 5</h2>
+                <p>Description 5</p>
+            </div>
+            <div class="button">
+                <img src="icon6.png" alt="Icon 6">
+                <h2>Title 6</h2>
+                <p>Description 6</p>
+            </div>
+            <div class="button">
+                <img src="icon7.png" alt="Icon 7">
+                <h2>Title 7</h2>
+                <p>Description 7</p>
+            </div>
+            <div class="button">
+                <img src="icon8.png" alt="Icon 8">
+                <h2>Title 8</h2>
+                <p>Description 8</p>
+            </div>
+            <div class="button">
+                <img src="icon9.png" alt="Icon 9">
+                <h2>Title 9</h2>
+                <p>Description 9</p>
+            </div>
         </div>
-    </div>
-
-    <div class="container" id="button-container">
-        <!-- Button 1 -->
-        <a class="button" onclick='radix.doCommand(JSON.stringify( { "command":  {"@class" : "com.viso.entities.commands.CommandRemoteExec", "remoteExecItem" : { "@class" : "com.viso.entities.RemoteExecItem", "repositoryItemId" : "670639868b15015f82e2c958", "repositoryItemName" : "keyevent for Knox", "domain" : "qa", "owner" : "admin@qa", "creationDate" : 1728461190065, "isReadOnly" : false, "privateRepoItem" : false, "command" : "!internal", "args" : [ "input_keyevent", "10", "0", "24" ], "authority" : "AUTHORITY_SYSTEM", "waitForExit" : true, "collectOutput" : true, "isScript" : false, "props" : { "args" : "input_keyevent 10 0 24" } }}}  ))'>
-            <div class="button-content">
-                <div class="button-text">
-                    <span class="description"></span>
-                    <span class="title">Volume Up</span>
-                </div>
-                <div class="button-icon">
-                    <img src="images/icons/tv.png" alt="Icon">
-                </div>
-            </div>
-        </a>
-        <!-- Button 2 -->
-        <a class="button" onclick='radix.doCommand(JSON.stringify( { "command":  {"@class" : "com.viso.entities.commands.CommandRemoteExec", "remoteExecItem" : { "@class" : "com.viso.entities.RemoteExecItem", "repositoryItemId" : "670639868b15015f82e2c958", "repositoryItemName" : "keyevent for Knox", "domain" : "qa", "owner" : "admin@qa", "creationDate" : 1728461190065, "isReadOnly" : false, "privateRepoItem" : false, "command" : "!internal", "args" : [ "input_keyevent", "10", "0", "25" ], "authority" : "AUTHORITY_SYSTEM", "waitForExit" : true, "collectOutput" : true, "isScript" : false, "props" : { "args" : "input_keyevent 10 0 25" } }}}  ))'>
-            <div class="button-content">
-                <div class="button-text">
-                    <span class="description"></span>
-                    <span class="title">Volume Down</span>
-                </div>
-                <div class="button-icon">
-                    <img src="images/icons/subs.png" alt="Icon">
-                </div>
-            </div>
-        </a>
-        <!-- End of buttons -->
-    </div>
-
-    <div class="footer">
-        <a href="https://www.hospitaltv.co.uk/" target="_blank">
-        <img class="footer-image1" src="images/logos/footer-image.png" alt="Footer Image">
-    </div>
-
+    </main>
+    <footer>
+        <p>© 2025 Healthcare Solutions</p>
+    </footer>
 </body>
 </html>
