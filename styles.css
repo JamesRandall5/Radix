@@ -50,7 +50,6 @@ main {
     grid-template-rows: repeat(3, 1fr); /* 3 rows */
     grid-gap: 20px; /* Spacing between buttons */
     width: calc(100% - 40px); /* Full width minus padding */
-    height: calc(100% - 40px); /* Full height minus padding */
     padding: 20px;
     box-sizing: border-box;
     margin-top: 300px;
