@@ -53,7 +53,7 @@ main {
     height: calc(100% - 40px); /* Full height minus padding */
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 175px;
+    margin-top: 200px;
     margi-bottom: 100px
 }
 
