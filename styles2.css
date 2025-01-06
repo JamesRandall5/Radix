@@ -53,8 +53,8 @@ main {
     width: calc(100% - 40px); /* Full width minus padding */
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 300px;
-    margin-bottom: 100px;
+    margin-top: 220px;
+    margin-bottom: 90px;
 }
 
 /* Individual button styling */
