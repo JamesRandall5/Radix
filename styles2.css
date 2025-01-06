@@ -118,9 +118,7 @@ main {
 }
 
 .scrollable-button {
-    flex: 0 0 150px; /* Fixed width and height */
-    height: 150px;
-    width: 210px;
+    flex: 0 0 210px; /* Fixed width and height W  */
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
