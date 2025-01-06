@@ -104,7 +104,7 @@ main {
     padding: 20px; /* Add padding around the list */
     box-sizing: border-box;
     width: 100%;
-    height: 150px;
+    height: 200px;
     scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
