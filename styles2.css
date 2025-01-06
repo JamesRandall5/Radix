@@ -53,8 +53,8 @@ main {
     width: calc(100% - 40px); /* Full width minus padding */
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 220px;
-    margin-bottom: 90px;
+    margin-top: 135px;
+    margin-bottom: 10px;
 }
 
 /* Individual button styling */
@@ -69,7 +69,7 @@ main {
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%; /* Full grid cell width */
-    height: 150px; 
+    height: 180px; 
 }
 
 .button:active {
