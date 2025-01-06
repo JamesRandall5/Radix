@@ -1,0 +1,67 @@
+/* Device Controls Container */
+.device-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+    position: relative; /* Allow child elements to position dynamically */
+}
+
+/* Main Button */
+.main-button {
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-button:active {
+    transform: scale(0.9);
+}
+
+/* Hidden Buttons Container */
+.hidden-buttons {
+    display: flex;
+    gap: 10px;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Fully transparent */
+    transform: translateX(-20px); /* Slightly offset */
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show Buttons when Active */
+.device-controls.show .hidden-buttons {
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fully opaque */
+    transform: translateX(0); /* Align with parent container */
+    transition: visibility 0s linear 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Control Buttons */
+.control-button {
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-button:active {
+    transform: scale(0.9);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
