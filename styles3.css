@@ -8,24 +8,25 @@
     width: 100%; /* Ensure full-width layout */
 }
 
-/* Main Button */
-.main-button {
-    background: #0078d4;
+/* General Button Styling */
+.control-button {
+    background: #0078d4; /* Match header/footer color */
     color: white;
     border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Space for text */
+    font-size: 16px; /* Standard text size */
+    text-align: center;
+    width: 150px; /* Fixed width for all buttons */
+    height: 50px; /* Fixed height for all buttons */
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.main-button:active {
+.control-button:active {
     transform: scale(0.9);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Hidden Buttons Container */
@@ -46,32 +47,7 @@
     transition: visibility 0s linear 0s, opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Control Buttons */
-.control-button {
-    background: #0078d4; /* Match header/footer color */
-    color: white;
-    border: none;
-    border-radius: 10px; /* Slightly rounded corners */
-    padding: 10px 20px; /* Space for text */
-    font-size: 16px; /* Standard text size */
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.control-button:active {
-    transform: scale(0.9);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
 /* Clear My Data Button */
 .always-visible {
     background: #ff4d4f; /* Red for emphasis */
-}
-
-/* Responsive Layout */
-.hidden-buttons {
-    position: absolute; /* Align to main button */
-    left: 60px; /* Offset slightly from main button */
 }
