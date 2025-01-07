@@ -51,7 +51,7 @@ main {
     width: calc(100% - 10px); /* Full width minus padding */
     padding: 10px;
     box-sizing: border-box;
-    margin-top: 100px;
+    margin-top: 85px;
     margin-bottom: 0px;
 }
 
