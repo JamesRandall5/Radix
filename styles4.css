@@ -99,7 +99,7 @@ main {
     gap: 20px; /* Space between icons */
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Disable vertical scrolling */
-    padding: 20px; /* Add padding around the list */
+    padding: 10px; /* Add padding around the list */
     box-sizing: border-box;
     width: 100%;
     height: 110px;
