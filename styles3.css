@@ -35,6 +35,9 @@
     gap: 10px; /* Space between hidden buttons */
     visibility: hidden; /* Hidden by default */
     opacity: 0; /* Fully transparent */
+    position: absolute; /* Positioned relative to the Controls button */
+    left: 160px; /* Offset to appear just right of the Controls button */
+    top: 0; /* Align vertically with the Controls button */
     transform: translateX(0); /* Start aligned */
     transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
 }
