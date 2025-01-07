@@ -68,7 +68,7 @@ main {
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%; /* Full grid cell width */
-    height: 180px; 
+    height: 130px; 
 }
 
 .button:active {
