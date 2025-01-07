@@ -22,8 +22,17 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Vertical alignment */
+    gap: 10px; /* Space between icon and text */
 }
 
+.control-button img {
+    width: 20px; /* Icon size */
+    height: 20px;
+}
+
+/* Button Active State */
 .control-button:active {
     transform: scale(0.9);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -53,4 +62,36 @@
 /* Clear My Data Button */
 .always-visible {
     background: #ff4d4f; /* Red for emphasis */
+}
+
+/* Scrollable List (Existing) */
+.scrollable-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 110px;
+    scroll-behavior: smooth;
+}
+
+/* Scrollable Button Icons */
+.scrollable-button img {
+    width: 80%;
+    height: auto;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .control-button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .control-button img {
+        width: 16px;
+        height: 16px;
+    }
 }
