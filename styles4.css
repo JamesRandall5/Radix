@@ -24,7 +24,7 @@ header, footer {
 
 header {
     top: 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 footer {
@@ -36,7 +36,6 @@ footer {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100%;
     padding: 0;
@@ -52,7 +51,7 @@ main {
     width: calc(100% - 40px); /* Full width minus padding */
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 65px;
+    margin-top: 110px;
     margin-bottom: 0px;
 }
 
@@ -68,7 +67,7 @@ main {
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%; /* Full grid cell width */
-    height: 130px; 
+    height: 110px; 
 }
 
 .button:active {
@@ -103,7 +102,7 @@ main {
     padding: 20px; /* Add padding around the list */
     box-sizing: border-box;
     width: 100%;
-    height: 90px;
+    height: 130px;
     scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
@@ -117,7 +116,7 @@ main {
 }
 
 .scrollable-button {
-    flex: 0 0 210px; /* Fixed width and height W  */
+    flex: 0 0 105px; /* Fixed width and height W  */
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
