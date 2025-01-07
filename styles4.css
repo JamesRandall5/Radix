@@ -1,0 +1,157 @@
+/* Set the viewport size and remove default margin/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Fixed header and footer */
+header, footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0078d4, #005bb5);
+    color: white;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    top: 0;
+    font-size: 1.5em;
+}
+
+footer {
+    bottom: 0;
+    font-size: 1em;
+}
+
+/* Main content area between header and footer */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Button grid layout */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    grid-gap: 20px; /* Spacing between buttons */
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 65px;
+    margin-bottom: 0px;
+}
+
+/* Individual button styling */
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Full grid cell width */
+    height: 180px; 
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button img {
+    width: 50%; /* Scale icon relative to button size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.button h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.button p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+/* Horizontally Scrollable List */
+.scrollable-list {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    padding: 20px; /* Add padding around the list */
+    box-sizing: border-box;
+    width: 100%;
+    height: 90px;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.scrollable-list::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height */
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+    background: #0078d4;
+    border-radius: 4px;
+}
+
+.scrollable-button {
+    flex: 0 0 210px; /* Fixed width and height W  */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scrollable-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scrollable-button img {
+    width: 80%; /* Adjust icon size inside the button */
+    height: auto;
+}
+
+/* Responsive design for smaller resolutions */
+@media (max-width: 600px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+        grid-gap: 15px;
+    }
+
+    .button {
+        height: 120px; /* Adjust button height for smaller screens */
+    }
+
+    .scrollable-button {
+        flex: 0 0 40px; /* Smaller buttons in scrollable list */
+        height: 40px;
+        width: 40px;
+    }
+}
