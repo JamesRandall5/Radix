@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthcare Tablet CMS</title>
-    <link rel="stylesheet" href="stylesC1.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="header-content">
-            <!-- Image on the left -->
-            <img src="NHSlogo.png" alt="Logo" class="header-logo">
+        <!-- Logo on the left -->
+        <img src="logo.png" alt="Logo" class="header-logo">
 
-            <!-- Title in the center -->
-            <a href="indexC1.html">
-                <h1>Healthcare Tablet CMS</h1>
-            </a>
+        <!-- Title in the center -->
+        <h1>Healthcare Tablet CMS</h1>
 
-            <!-- Date and Time on the right -->
-            <div class="header-datetime" id="datetime"></div>
-        </div>
+        <!-- Date and Time on the right -->
+        <div class="header-datetime" id="datetime"></div>
     </header>
+
+    <!-- Main Content -->
     <main>
         <div class="button-grid">
             <div class="button">
@@ -90,59 +90,35 @@
             <div class="scrollable-button">
                 <img src="bbc1.png" alt="Icon 6">
             </div>
-            <div class="scrollable-button">
-                <img src="bbc1.png" alt="Icon 7">
-            </div>
-            <div class="scrollable-button">
-                <img src="bbc1.png" alt="Icon 8">
-            </div>
-            <div class="scrollable-button">
-                <img src="bbc1.png" alt="Icon 9">
-            </div>
-            <div class="scrollable-button">
-                <img src="bbc1.png" alt="Icon 10">
-            </div>
-            <div class="scrollable-button">
-                <img src="bbc1.png" alt="Icon 11">
-            </div>
-            <div class="scrollable-button">
-                <img src="bbc1.png" alt="Icon 12">
-            </div>
         </div>
+
+        <!-- Device Controls -->
         <div class="device-controls">
-        <!-- Controls Button (Far Left) -->
-          <button class="control-button main-button" onclick="toggleButtons()">
-            <img src="up.png" alt="Controls Icon"> Controls
-          </button>
+            <!-- Controls Button -->
+            <button class="control-button main-button" onclick="toggleButtons()">
+                <img src="up.png" alt="Controls Icon"> Controls
+            </button>
 
-        <!-- Hidden Buttons -->
-        <div class="hidden-buttons">
-          <button class="control-button">
-            <img src="up.png" alt="Volume + Icon"> Volume +
-          </button>
-          <button class="control-button">
-            <img src="up.png" alt="Volume - Icon"> Volume -
-          </button>
-          <button class="control-button">
-            <img src="up.png" alt="Brightness + Icon"> Brightness +
-          </button>
-          <button class="control-button">
-            <img src="up.png" alt="Brightness - Icon"> Brightness -
-          </button>
-      </div>
+            <!-- Hidden Buttons -->
+            <div class="hidden-buttons">
+                <button class="control-button">
+                    <img src="up.png" alt="Volume + Icon"> Volume +
+                </button>
+                <button class="control-button">
+                    <img src="up.png" alt="Volume - Icon"> Volume -
+                </button>
+            </div>
 
-      <!-- Clear My Data Button (Far Right) -->
-      <button class="control-button always-visible">
-        <img src="up.png" alt="Clear Data Icon"> Clear My Data
-      </button>
-    </div>
-
+            <!-- Clear My Data Button -->
+            <button class="control-button always-visible">
+                <img src="up.png" alt="Clear Data Icon"> Clear My Data
+            </button>
+        </div>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>© 2025 Healthcare Solutions</p>
     </footer>
-
-  <script src="script.js"></script>
-  
 </body>
 </html>
