@@ -49,7 +49,7 @@ main {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     grid-template-rows: repeat(3, 1fr); /* 3 rows */
     grid-gap: 10px; /* Spacing between buttons */
-    width: calc(100% - 10px); /* Full width minus padding */
+    width: 100%; 
     box-sizing: border-box;
     margin-top: 110px;
     margin-bottom: 0px;
