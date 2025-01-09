@@ -19,40 +19,40 @@ header, footer {
     color: white;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    top: 0;
     display: flex;
-    justify-content: space-between; /* Align items to edges */
     align-items: center;
     padding: 10px 20px;
-    font-size: 1em;
 }
 
-footer {
-    bottom: 0;
-    font-size: 1em;
+/* Header specific */
+header {
+    top: 0;
+    justify-content: space-between; /* Space out header elements */
 }
 
-/* Header Logo */
 .header-logo {
     width: 50px; /* Logo size */
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Header Title */
 header h1 {
-    flex-grow: 1; /* Center the title */
+    flex-grow: 1; /* Take up remaining space for centering */
     margin: 0;
     text-align: center;
     font-size: 1.5em;
 }
 
-/* Header Date/Time */
 .header-datetime {
     font-size: 1em;
     white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Footer specific */
+footer {
+    bottom: 0;
+    justify-content: center; /* Center text horizontally */
+    font-size: 1em;
+    text-align: center;
 }
 
 /* Main content area between header and footer */
