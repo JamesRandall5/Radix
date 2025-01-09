@@ -1,0 +1,247 @@
+/* Set the viewport size and remove default margin/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Fixed header and footer */
+header, footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0078d4, #005bb5);
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Align items to edges */
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+footer {
+    bottom: 0;
+    font-size: 1em;
+}
+
+/* Header Logo */
+.header-logo {
+    width: 50px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Header Title */
+header h1 {
+    flex-grow: 1; /* Center the title */
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Header Date/Time */
+.header-datetime {
+    font-size: 1em;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Main content area between header and footer */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+/* Button grid layout */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    grid-gap: 10px; /* Spacing between buttons */
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 120px;
+    margin-bottom: 0px;
+}
+
+/* Individual button styling */
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Full grid cell width */
+    height: 110px;
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button img {
+    width: 50%; /* Scale icon relative to button size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.button h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.button p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+/* Horizontally Scrollable List */
+.scrollable-list {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    padding: 10px; /* Add padding around the list */
+    box-sizing: border-box;
+    width: 100%;
+    height: 110px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.scrollable-list::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height */
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+    background: #0078d4;
+    border-radius: 4px;
+}
+
+.scrollable-button {
+    flex: 0 0 105px; /* Fixed width and height */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scrollable-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scrollable-button img {
+    width: 80%; /* Adjust icon size inside the button */
+    height: auto;
+}
+
+/* Responsive design for smaller resolutions */
+@media (max-width: 600px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+        grid-gap: 15px;
+    }
+
+    .button {
+        height: 120px; /* Adjust button height for smaller screens */
+    }
+
+    .scrollable-button {
+        flex: 0 0 40px; /* Smaller buttons in scrollable list */
+        height: 40px;
+        width: 40px;
+    }
+}
+
+/* Device Controls Container */
+.device-controls {
+    display: flex;
+    justify-content: space-between; /* Align far left and far right */
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    position: relative; /* For positioning child elements */
+    width: 100%; /* Ensure full-width layout */
+}
+
+/* General Button Styling */
+.control-button {
+    background: #0078d4; /* Match header/footer color */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Space for text */
+    font-size: 16px; /* Standard text size */
+    text-align: center;
+    width: 180px; /* Fixed width for all buttons */
+    height: 50px; /* Fixed height for all buttons */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Vertical alignment */
+    gap: 10px; /* Space between icon and text */
+}
+
+.control-button img {
+    width: 20px; /* Icon size */
+    height: 20px;
+}
+
+/* Button Active State */
+.control-button:active {
+    transform: scale(0.9);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden Buttons Container */
+.hidden-buttons {
+    display: flex;
+    gap: 10px; /* Space between hidden buttons */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Fully transparent */
+    position: absolute; /* Positioned relative to the Controls button */
+    left: 190px; /* Offset to appear just right of the Controls button */
+    top: 0; /* Align vertically with the Controls button */
+    transform: translateX(0); /* Start aligned */
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show Buttons when Active */
+.device-controls.show .hidden-buttons {
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fully opaque */
+    transform: translateX(0); /* Stay aligned */
+    transition: visibility 0s linear 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Clear My Data Button */
+.always-visible {
+    background: #ff4d4f; /* Red for emphasis */
+}
