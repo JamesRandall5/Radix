@@ -100,7 +100,7 @@ main {
     grid-gap: 10px; /* Spacing between buttons */
     width: 100%; 
     box-sizing: border-box;
-    margin-top: 95px;
+    margin-top: 100px;
     margin-bottom: 0px;
 }
 
@@ -116,7 +116,7 @@ main {
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%; /* Full grid cell width */
-    height: 115px; 
+    height: 116.5px; 
 }
 
 .button:active {
