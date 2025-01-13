@@ -29,12 +29,12 @@ header, footer {
 header {
     top: 0;
     justify-content: space-between; /* Spread logo, title, and date/time */
-    height: 70px; /* Set height to fit date/time */
+    height: 100px; /* Set height to fit date/time */
 }
 
 /* Header logo */
 .header-logo {
-    width: 50px; /* Logo size */
+    width: 150px; /* Logo size */
     height: auto; /* Maintain aspect ratio */
 }
 
