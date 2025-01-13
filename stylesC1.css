@@ -28,7 +28,7 @@ header, footer {
 header {
     top: 0;
     justify-content: space-between; /* Spread logo, title, and date/time */
-    height: 60px; /* Set height for consistency */
+    height: 70px; /* Set height to fit date/time */
 }
 
 .header-logo {
@@ -46,11 +46,26 @@ header h1 {
     text-align: center; /* Keep multi-line text centered */
 }
 
-/* Header date and time (right-aligned) */
+/* Header date and time container */
 .header-datetime {
+    display: flex;
+    flex-direction: column; /* Stack time and date vertically */
+    align-items: flex-end; /* Align both to the right */
     font-size: 1em;
+    line-height: 1.2; /* Adjust spacing between lines */
     white-space: nowrap; /* Prevent wrapping */
     text-align: right;
+}
+
+/* Time styling */
+.header-datetime .time {
+    font-size: 1.5em; /* Larger font for time */
+    font-weight: bold;
+}
+
+/* Date styling */
+.header-datetime .date {
+    font-size: 1em; /* Smaller font for date */
 }
 
 /* Footer layout */
