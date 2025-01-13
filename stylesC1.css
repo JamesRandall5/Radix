@@ -25,9 +25,17 @@ header, footer {
 }
 
 /* Header layout */
+header h1 {
+    position: absolute; /* Remove from the flow */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for element width */
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+/* Header layout adjustments */
 header {
-    top: 0;
-    justify-content: space-between; /* Spread logo, title, and date/time */
+    height: 60px; /* Set height for consistency */
 }
 
 .header-logo {
@@ -35,12 +43,6 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 
-header h1 {
-    flex-grow: 1; /* Center the title */
-    margin: 0;
-    text-align: center; /* Center-align text */
-    font-size: 1.5em;
-}
 
 .header-datetime {
     font-size: 1em;
