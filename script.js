@@ -5,12 +5,19 @@ function toggleButtons() {
 
 // Function to update date and time
 function updateDateTime() {
-    const datetimeElement = document.getElementById('datetime');
+    const timeElement = document.getElementById('time');
+    const dateElement = document.getElementById('date');
     const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    datetimeElement.textContent = now.toLocaleDateString(undefined, options);
+
+    // Format time
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    timeElement.textContent = now.toLocaleTimeString(undefined, timeOptions);
+
+    // Format date
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    dateElement.textContent = now.toLocaleDateString(undefined, dateOptions);
 }
 
-// Update date/time every minute
-setInterval(updateDateTime, 60000);
-updateDateTime(); // Initial call to set the date/time immediately
+// Update every second
+setInterval(updateDateTime, 1000);
+updateDateTime(); // Initial call
