@@ -87,7 +87,7 @@ main {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    padding: 0;
+    padding: 15px;
     box-sizing: border-box;
 }
 
@@ -115,7 +115,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Keep box shadow */
     text-align: left; /* Ensure text alignment remains consistent */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    height: 110px; /* Fixed height */
+    height: 90px; /* Fixed height */
     padding: 10px 15px; /* Internal padding */
     overflow: hidden; /* Prevent content from overflowing */
 }
