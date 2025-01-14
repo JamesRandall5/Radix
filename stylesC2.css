@@ -1,4 +1,4 @@
-/* General Reset */
+/* Set the viewport size and remove default margin/padding */
 html, body {
     margin: 0;
     padding: 0;
@@ -10,171 +10,297 @@ html, body {
     overflow: hidden; /* Prevent scrolling */
 }
 
-/* Header Styling */
-header {
+/* Fixed header and footer */
+header, footer {
     position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
     background: linear-gradient(90deg, #0078d4, #005bb5);
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
 }
 
+/* Header layout */
+header {
+    top: 0;
+    justify-content: space-between; /* Spread logo, title, and date/time */
+    height: 100px; /* Set height to fit date/time */
+    padding: 10px 20px;
+}
+
+/* Header logo */
 .header-logo {
-    width: 150px;
-    height: auto;
+    width: 150px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Center text absolutely positioned */
 header h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Remove from the flow */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for element width */
+    margin: 0;
     font-size: 1.5em;
-    text-align: center;
+    text-align: center; /* Keep multi-line text centered */
 }
 
+/* Header date and time container */
 .header-datetime {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: column; /* Stack time and date vertically */
+    align-items: flex-end; /* Align both to the right */
+    font-size: 1em;
+    line-height: 1.2; /* Adjust spacing between lines */
+    white-space: nowrap; /* Prevent wrapping */
     text-align: right;
+    padding-right: 10px; /* Ensure content does not touch the edge */
+    overflow: hidden; /* Prevent any accidental overflow */
+    max-width: calc(100% - 150px); /* Reserve space for the logo and title */
 }
 
+/* Time styling */
 .header-datetime .time {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Larger font for time */
     font-weight: bold;
 }
 
+/* Date styling */
 .header-datetime .date {
-    font-size: 1em;
+    font-size: 1em; /* Smaller font for date */
 }
 
-/* Footer Styling */
+/* Footer layout */
 footer {
-    position: fixed;
     bottom: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #0078d4, #005bb5);
-    color: white;
+    justify-content: center; /* Center text horizontally */
+    font-size: 1em;
     text-align: center;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Button Grid Styling */
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    width: calc(100% - 40px);
-    padding: 20px;
-    margin-top: 120px;
+/* Main content area between header and footer */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
     box-sizing: border-box;
 }
 
+/* Button grid layout */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    grid-gap: 20px; /* Spacing between buttons */
+    width: 100%; /* Full width of the viewport */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+/* Prevent long-press actions like text selection or URL floating for grid buttons */
+.button-grid a {
+    -webkit-user-select: none; /* Disable text selection in Chrome/Safari */
+    -moz-user-select: none; /* Disable text selection in Firefox */
+    -ms-user-select: none; /* Disable text selection in IE/Edge */
+    user-select: none; /* Disable text selection in modern browsers */
+    -webkit-touch-callout: none; /* Disable long-press actions in Safari */
+    touch-action: manipulation; /* Prevent browser default gestures on long press */
+}
+
+/* Button Styling */
 .button {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
+    display: flex; /* Flex layout for positioning content */
+    justify-content: space-between; /* Space between text and icon */
+    align-items: center; /* Center items vertically */
+    background-color: #004E98; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Keep box shadow */
+    text-align: left; /* Ensure text alignment remains consistent */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 90px; /* Fixed height */
+    padding: 10px 15px; /* Internal padding */
+    overflow: hidden; /* Prevent content from overflowing */
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
+}
+
+
+
+/* Button Content Wrapper */
+.button-content {
+    display: flex; /* Flex layout for content */
+    justify-content: space-between; /* Separate text and icon */
     align-items: center;
+    width: 100%; /* Ensure the content fills the button */
 }
 
-.button img {
-    width: 50%;
-    height: auto;
-    margin-bottom: 10px;
+/* Button Text */
+.button-text {
+    text-align: left; /* Align text to the left */
 }
 
-.button h2 {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #333;
+.title {
+    font-weight: bold; /* Emphasize title */
+    display: block;
+    font-size: 1.2em; /* Adjust title size */
 }
 
-.button p {
-    font-size: 1em;
-    color: #666;
-    margin: 0;
+.description {
+    display: block;
+    font-size: 0.9em; /* Smaller size for the description */
+    color: #D9EFFF; /* Lighten description color for contrast */
 }
 
+/* Button Icon */
+.button-icon {
+    margin-left: 10px; /* Space between text and icon */
+}
+
+.button-icon img {
+    max-height: 70%; /* Scale icon to fit within the button */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button Active State */
 .button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Scrollable List */
+/* Button Hover State */
+.button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontally Scrollable List */
 .scrollable-list {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 10px;
+    gap: 20px; /* Space between icons */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    padding: 10px; /* Add padding around the list */
     box-sizing: border-box;
     width: 100%;
     height: 110px;
-    scroll-behavior: smooth;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.scrollable-list::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height */
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+    background: #0078d4;
+    border-radius: 4px;
 }
 
 .scrollable-button {
-    flex: 0 0 105px;
+    flex: 0 0 105px; /* Fixed width and height */
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
+}
+
+.scrollable-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .scrollable-button img {
-    width: 80%;
+    width: 80%; /* Adjust icon size inside the button */
     height: auto;
 }
 
-/* Device Controls Styling */
+/* Device Controls Container */
 .device-controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align far left and far right */
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 10px; /* Space between elements */
+    position: relative; /* For positioning child elements */
+    width: 100%; /* Ensure full-width layout */
 }
 
+/* General Button Styling */
 .control-button {
-    background: #0078d4;
+    background: #0078d4; /* Match header/footer color */
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Space for text */
+    font-size: 16px; /* Standard text size */
     text-align: center;
+    width: 180px; /* Fixed width for all buttons */
+    height: 50px; /* Fixed height for all buttons */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Vertical alignment */
+    gap: 10px; /* Space between icon and text */
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
 }
 
 .control-button img {
-    width: 20px;
+    width: 20px; /* Icon size */
     height: 20px;
 }
 
+/* Button Active State */
 .control-button:active {
     transform: scale(0.9);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden Buttons Container */
+.hidden-buttons {
+    display: flex;
+    gap: 10px; /* Space between hidden buttons */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Fully transparent */
+    position: absolute; /* Positioned relative to the Controls button */
+    left: 190px; /* Offset to appear just right of the Controls button */
+    top: 0; /* Align vertically with the Controls button */
+    transform: translateX(0); /* Start aligned */
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show Buttons when Active */
+.device-controls.show .hidden-buttons {
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fully opaque */
+    transform: translateX(0); /* Stay aligned */
+    transition: visibility 0s linear 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Clear My Data Button */
+.always-visible {
+    background: #ff4d4f; /* Red for emphasis */
 }
