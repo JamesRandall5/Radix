@@ -96,8 +96,9 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     grid-template-rows: repeat(3, 1fr); /* 3 rows */
-    grid-gap: 10px; /* Spacing between buttons */
-    width: 100%; 
+    grid-gap: 20px; /* Spacing between buttons */
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 20px; /* Space around the grid */
     box-sizing: border-box;
     margin-top: 100px;
     margin-bottom: 0px;
@@ -115,8 +116,10 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Keep box shadow */
     text-align: left; /* Ensure text alignment remains consistent */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    height: 116px; /* Maintain current height */
-    padding: 15px 20px; /* Add padding inside the button */
+    height: 110px; /* Fixed height */
+    width: calc(100% - 20px); /* Reduce button size to allow gaps */
+    padding: 10px 15px; /* Add padding inside the button */
+    margin: 0 auto; /* Center within grid cell */
     overflow: hidden; /* Prevent content from overflowing */
 }
 
@@ -153,6 +156,17 @@ main {
 .button-icon img {
     max-height: 70%; /* Scale icon to fit within the button */
     height: auto; /* Maintain aspect ratio */
+}
+
+/* Button Active State */
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover State */
+.button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Horizontally Scrollable List */
