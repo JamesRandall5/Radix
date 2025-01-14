@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Tablet CMS</title>
+    <link rel="stylesheet" href="stylesC2.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo on the left -->
+        <img src="NHSlogo.png" alt="Logo" class="header-logo">
+
+        <!-- Title in the center -->
+        <h1>Healthcare Tablet CMS</h1>
+
+        <!-- Date and Time on the right -->
+        <div class="header-datetime">
+            <span class="time" id="time"></span>
+            <span class="date" id="date"></span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Button Grid -->
+        <div class="button-grid">
+            <a href="pages/WatchTV.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Watch</span>
+                        <span class="title">TV</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/tv.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/News.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Stay Updated</span>
+                        <span class="title">News</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/news.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Contact.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Get in Touch</span>
+                        <span class="title">Contact</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/contact.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Music.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Listen to</span>
+                        <span class="title">Music</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/music.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Gallery.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">View</span>
+                        <span class="title">Gallery</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/gallery.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Settings.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Adjust</span>
+                        <span class="title">Settings</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/settings.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Games.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Play</span>
+                        <span class="title">Games</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/games.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Docs.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Read</span>
+                        <span class="title">Docs</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/docs.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+            <a href="pages/Calendar.html" class="button">
+                <div class="button-content">
+                    <div class="button-text">
+                        <span class="description">Plan</span>
+                        <span class="title">Calendar</span>
+                    </div>
+                    <div class="button-icon">
+                        <img src="images/icons/calendar.png" alt="Icon">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Horizontally Scrollable List -->
+        <div class="scrollable-list">
+            <div class="scrollable-button">
+                <img src="bbc1.png" alt="Icon 1">
+            </div>
+            <!-- Repeat for other scrollable buttons (total of 12 buttons) -->
+            <!-- Example for 12 buttons -->
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 2"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 3"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 4"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 5"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 6"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 7"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 8"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 9"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 10"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 11"></div>
+            <div class="scrollable-button"><img src="bbc1.png" alt="Icon 12"></div>
+        </div>
+
+        <!-- Device Controls -->
+        <div class="device-controls">
+            <!-- Controls Button -->
+            <button class="control-button main-button" onclick="toggleButtons()">
+                <img src="up.png" alt="Controls Icon"> Controls
+            </button>
+
+            <!-- Hidden Buttons -->
+            <div class="hidden-buttons">
+                <button class="control-button">
+                    <img src="up.png" alt="Volume + Icon"> Volume +
+                </button>
+                <button class="control-button">
+                    <img src="up.png" alt="Volume - Icon"> Volume -
+                </button>
+                <button class="control-button">
+                    <img src="up.png" alt="Brightness + Icon"> Brightness +
+                </button>
+                <button class="control-button">
+                    <img src="up.png" alt="Brightness - Icon"> Brightness -
+                </button>
+            </div>
+
+            <!-- Clear My Data Button -->
+            <button class="control-button always-visible">
+                <img src="up.png" alt="Clear Data Icon"> Clear My Data
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Healthcare Solutions</p>
+    </footer>
+</body>
+</html>
