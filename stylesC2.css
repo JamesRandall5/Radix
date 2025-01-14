@@ -106,6 +106,16 @@ main {
     margin-bottom: 0px;
 }
 
+/* Prevent long-press actions like text selection or URL floating for grid buttons */
+.button-grid a {
+    -webkit-user-select: none; /* Disable text selection in Chrome/Safari */
+    -moz-user-select: none; /* Disable text selection in Firefox */
+    -ms-user-select: none; /* Disable text selection in IE/Edge */
+    user-select: none; /* Disable text selection in modern browsers */
+    -webkit-touch-callout: none; /* Disable long-press actions in Safari */
+    touch-action: manipulation; /* Prevent browser default gestures on long press */
+}
+
 /* Button Styling */
 .button {
     display: flex; /* Flex layout for positioning content */
@@ -126,6 +136,8 @@ main {
     -ms-user-select: none; /* Internet Explorer */
     user-select: none; /* Standard */
 }
+
+
 
 /* Button Content Wrapper */
 .button-content {
