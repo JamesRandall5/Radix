@@ -21,3 +21,72 @@ function updateDateTime() {
 // Update every second
 setInterval(updateDateTime, 1000);
 updateDateTime(); // Initial call
+
+
+// Radix functions
+
+
+function volumeUp() {
+    const payload = {
+        command: {
+            "@class": "com.viso.entities.commands.CommandRemoteExec",
+            remoteExecItem: {
+                "@class": "com.viso.entities.RemoteExecItem",
+                command: "!internal",
+                args: ["input_keyevent", "10", "0", "24"], // Volume Up KeyEvent
+                authority: "AUTHORITY_SYSTEM",
+                waitForExit: true,
+                collectOutput: true,
+                repositoryItemName: "Volume Up"
+            }
+        }
+    };
+
+    radix.doCommand(JSON.stringify(payload));
+}
+
+
+function volumeDown() {
+    const payload = {
+        command: {
+            "@class": "com.viso.entities.commands.CommandRemoteExec",
+            remoteExecItem: {
+                "@class": "com.viso.entities.RemoteExecItem",
+                command: "!internal",
+                args: ["input_keyevent", "10", "0", "25"], // Volume Down KeyEvent
+                authority: "AUTHORITY_SYSTEM",
+                waitForExit: true,
+                collectOutput: true,
+                repositoryItemName: "Volume Down"
+            }
+        }
+    };
+
+    radix.doCommand(JSON.stringify(payload));
+}
+
+
+function clearApplicationData(appPackage) {
+    const payload = {
+        command: {
+            "@class": "com.viso.entities.commands.CommandRemoteExec",
+            remoteExecItem: {
+                "@class": "com.viso.entities.RemoteExecItem",
+                command: "sh",
+                args: ["-c", `pm clear ${appPackage} ;`], // Clear App Data
+                authority: "AUTHORITY_SYSTEM",
+                waitForExit: true,
+                collectOutput: true,
+                repositoryItemName: `Clear Data for ${appPackage}`,
+                props: {
+                    isampm: true,
+                    ampmCommand: "pmclear",
+                    components: [appPackage]
+                }
+            }
+        }
+    };
+
+    radix.doCommand(JSON.stringify(payload));
+}
+
