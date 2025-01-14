@@ -90,3 +90,13 @@ function clearApplicationData(appPackage) {
     radix.doCommand(JSON.stringify(payload));
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const gridLinks = document.querySelectorAll(".button-grid a");
+
+    gridLinks.forEach(link => {
+        // Prevent long-press actions like context menu or dragging URLs
+        link.addEventListener("contextmenu", event => event.preventDefault()); // Disable context menu
+        link.addEventListener("mousedown", event => event.preventDefault()); // Suppress long-press
+        link.addEventListener("touchstart", event => event.preventDefault()); // Disable touch gestures
+    });
+});
