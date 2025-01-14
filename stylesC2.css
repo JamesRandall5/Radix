@@ -96,9 +96,9 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
     grid-gap: 20px; /* Spacing between buttons */
-    width: calc(100% - 40px); /* Full width minus padding */
+    width: 100%; /* Full width of the viewport */
     padding: 20px; /* Space around the grid */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding in width calculation */
     margin-top: 100px;
     margin-bottom: 0px;
 }
@@ -111,13 +111,12 @@ main {
     background-color: #004E98; /* Button background color */
     color: white; /* Text color */
     text-decoration: none; /* Remove underline from links */
-    border-radius: 15px; /* Keep rounded corners */
+    border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Keep box shadow */
     text-align: left; /* Ensure text alignment remains consistent */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     height: 110px; /* Fixed height */
-    width: 100%; /* Fit buttons within grid cells */
-    padding: 10px 15px; /* Add padding inside the button */
+    padding: 10px 15px; /* Internal padding */
     overflow: hidden; /* Prevent content from overflowing */
 }
 
