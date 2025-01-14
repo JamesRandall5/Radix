@@ -157,10 +157,10 @@
 
             <!-- Hidden Buttons -->
             <div class="hidden-buttons">
-                <button class="control-button">
+                <button class="control-button" onclick="volumeUp()">
                     <img src="up.png" alt="Volume + Icon"> Volume +
                 </button>
-                <button class="control-button">
+                <button class="control-button" onclick="volumeDown()">
                     <img src="up.png" alt="Volume - Icon"> Volume -
                 </button>
                 <button class="control-button">
@@ -172,7 +172,7 @@
             </div>
 
             <!-- Clear My Data Button -->
-            <button class="control-button always-visible">
+            <button class="control-button always-visible" onclick="clearApplicationData('com.google.android.youtube')">
                 <img src="up.png" alt="Clear Data Icon"> Clear My Data
             </button>
         </div>
