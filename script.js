@@ -94,9 +94,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const gridLinks = document.querySelectorAll(".button-grid a");
 
     gridLinks.forEach(link => {
-        // Prevent long-press actions like context menu or dragging URLs
-        link.addEventListener("contextmenu", event => event.preventDefault()); // Disable context menu
-        link.addEventListener("mousedown", event => event.preventDefault()); // Suppress long-press
-        link.addEventListener("touchstart", event => event.preventDefault()); // Disable touch gestures
+        // Prevent the context menu (long press effect) without interfering with clicks
+        link.addEventListener("contextmenu", event => event.preventDefault());
+
+        // Allow normal navigation on click
+        link.addEventListener("click", event => {
+            const url = link.getAttribute("href");
+            if (url) {
+                window.location.href = url; // Navigate to the URL
+            }
+        });
     });
 });
