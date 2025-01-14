@@ -97,7 +97,6 @@ main {
     grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
     grid-gap: 20px; /* Spacing between buttons */
     width: 100%; /* Full width of the viewport */
-    padding: 20px; /* Space around the grid */
     box-sizing: border-box; /* Include padding in width calculation */
     margin-top: 100px;
     margin-bottom: 0px;
