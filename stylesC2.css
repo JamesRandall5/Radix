@@ -22,6 +22,10 @@ header, footer {
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
 }
 
 /* Header layout */
@@ -117,6 +121,10 @@ main {
     height: 90px; /* Fixed height */
     padding: 10px 15px; /* Internal padding */
     overflow: hidden; /* Prevent content from overflowing */
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
 }
 
 /* Button Content Wrapper */
@@ -199,6 +207,10 @@ main {
     align-items: center;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
 }
 
 .scrollable-button:active {
@@ -238,6 +250,10 @@ main {
     display: flex; /* Flexbox for icon and text alignment */
     align-items: center; /* Vertical alignment */
     gap: 10px; /* Space between icon and text */
+    -webkit-user-select: none; /* Chrome, Safari, and Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard */
 }
 
 .control-button img {
